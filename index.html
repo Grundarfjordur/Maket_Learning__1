@@ -9,10 +9,10 @@
     </head>
     <body>
         <header>
-            <div>
-                <h2>Extract</h2>
+            <div> <!-- можна без div -->
+                <h2>Extract</h2> <!-- назва сайта в h1 > a -->
             </div>
-            <div>
+            <div> <!-- це не div, це nav  -->
                 <ul>
                     <li><a href="#div__home">HOME</a></li>
                     <li><a href="#div__about">ABOUT</a></li>
@@ -20,33 +20,44 @@
                     <li><a href="#div__portfolio">PORTFOLIO</a></li>
                     <li><a href="#div__blog">BLOG</a></li>
                     <li><a href="#div__contact">CONTACT</a></li>
-                    <li><a href="#">HIRE ME</a></li>
+                    <li><a href="#">HIRE ME</a></li> <!-- це не сюда  -->
                 </ul>
             </div>
+            <!-- hire me сюда кнопкой  -->
         </header>
-
-        <div id="div__home" title="home">
-            <h1>Hello</h1>
+        <!-- весь контент в <main> -->
+        <!-- якщо є блоки на всю сторінку і не на всю, то всі блоки роби за конструкцією <div><div></div></div>  -->
+        <div id="div__home" title="home"> <!-- не використовувати id для стилізації в css, він тільки для js -->
+            <h1>Hello</h1> <!-- h1 тільки для назви сторінки/сайта  -->
             <h2>I`m Stiven Smith</h2>
             <p>Story Telling, Web developer, Designer &amp; Graphics Design Experience</p>
             <ul>
-                <li><input type="image" src="img/facebook.png" alt="facebook.png"/></li>
-                <li><input type="image" src="img/twitter.png" alt="twitter.png"/></li>
+                <li><input type="image" src="google.com" src="img/facebook.png" alt="facebook.png"/></li> <!-- картинка з силкой роби <a><image>  -->
+                <li><input type="image" src="img/twitter.png" alt="twitter.png"/></li> <!-- input тільки в <form> -->
                 <li><input type="image" src="img/linkedin.png" alt="linkedin.png"/></li>
                 <li><input type="image" src="img/tumblr.png" alt="tumblr.png"/></li>
                 <li><input type="image" src="img/vimeo.png" alt="vimeo.png"/></li>
             </ul>
-            <img src="img/slider.jpg" alt="slider.jpg">
+            <img src="img/slider.jpg" alt="slider.jpg"> <!-- Варік правильний, але коли дійдем до стилізації видалиш, буде легще рішення  -->
         </div>
         
-        <div id="div__about" title="about">
+        <div id="div__about" title="about"> <!-- div атрибут title не задавай -->
             <div>
                 <img src="img/2.jpg" alt="2.jpg">
             </div>
             <div>
                 <h3>Extrat is Awesome !</h3>
                 <h2>Free to Download for Everyone</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod por incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo onsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat<br/>Pidatat non proident, sunt in culpa qui officia deserunt mollit anim id est erun laborum. Sed ut perspiciatis unde omnis</p>
+                <p> <!-- довгі рядки зменшуй до розміру екрана  -->
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod por incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo onsequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                    nulla pariatur. Excepteur sint occaecat
+                    <br/>Pidatat non proident, sunt in culpa qui officia deserunt
+                    mollit anim id est erun laborum. Sed ut perspiciatis unde omnis
+                </p>
                 <ul>
                     <li>Branding Identity</li>
                     <li>Web Developer</li>
@@ -57,7 +68,7 @@
         </div>
         
         <div title="Comp.Direction">
-            <div>
+            <div> <!-- цей контейнер не над  -->
                 <div>
                     <input type="image" src="img/share.png" alt="share.png"/>
                 </div>
@@ -84,11 +95,12 @@
         
         <div title="my expertise">
             <h2>MY EXPERTISE</h2>
+            <!-- вони всі в одном рядку, знач їм нада контейнер div -->
             <div>
                 <div>
                     <span>90%</span>
                 </div>
-                <div>
+                <div> <!-- це можна виправити на h4 і тоді span не над буде -->
                     <span>Mobile Application</span>
                 </div>    
             </div>
@@ -120,7 +132,7 @@
         
         <div id="div__portfolio" title="our portfolio">
             <h2>OUR PORTFOLIO</h2>
-            <div>
+            <div> <!-- список можна не ложити в div -->
                 <ul>
                     <li>ALL SHOW</li>
                     <li>BRANDING</li>
@@ -133,9 +145,10 @@
             <div>
                 <div>
                     <img src="img/p1.jpg" />
-                    <button><img src="img/arrows-alt.png" alt="arrows-alt.png"/></button>
+                     <!-- все що нижче в отдєльний блок, щоб потім це анімувати не по отдєльності а все разом за раз -->
+                    <button><img src="img/arrows-alt.png" alt="arrows-alt.png"/></button> <!-- завжди всім кнопкам, що не в FORM давай type="button" -->
                     <button><img src="img/link-alt.png" alt="link-alt.png"/></button>
-                    <h4>Demo Gallery Title 1</h4>
+                    <h4>Demo Gallery Title 1</h4>  <!-- якщо такі мєлкі заголовки то юзай h5-h6 -->
                     <h4>Marketing, Product</h4>
                 </div>
                 <div>
@@ -178,11 +191,12 @@
         
         <div id="div__service"   title="our service">
             <h2>OUR SERVICE</h2>
+            <!-- вони всі в одном блоку, знач їм нада контейнер div -->
             <div>
-                <div>
+                <div> <!-- div не обов'язковий, але як рішення норм -->
                     <img src="img/laptop.png" alt=""/>
                 </div>
-                <div>
+                <div> <!-- div не обов'язковий, але як рішення норм -->
                     <h3>Product Design</h3>
                     <p>Lorem ipsum dolor sit amet, sectetur adipisicing elit, sed do eiusmod por incididunt ut labore</p>
                 </div>
@@ -236,17 +250,25 @@
         
         <div title="testimonial">
             <h2>TESTIMONIAL</h2>
-            <div>
+            <div><!-- це дасть слайдер того хай поки буде но потім удалити -->
                 <ul>
                     <li>
                         <div>
                             <div>
                                 <img src="img/1.png" alt=""/>
+                                <!-- div обов'язковий для подальшої стилізації -->
                                 <h4>David Markers</h4>
                                 <h5>Web Designer</h5>
                             </div>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi perferendis odio adipisci ullam reiciendis voluptatum molestias corrupti labore magni aut?</p>
                             <span>Stars</span>
+                            <!-- <div> Вот так робиться рейтинг
+                                <svg></svg> SVG нада щоб в середині була не закрашена, колір любий він стилізується
+                                <svg></svg> https://www.flaticon.com/ru/free-icon/empty-star-_13595#
+                                <svg></svg>
+                                <svg></svg>
+                                <svg></svg>
+                            </div> -->
                         </div>
 
                     </li>
@@ -262,7 +284,7 @@
                         </div>
                     </li>
                 </ul>
-                <span>_ _ _</span>
+                <span>_ _ _</span> <!-- це дасть слайдер того хай поки буде но потім удалити -->
             </div>
         </div>
         
@@ -272,10 +294,16 @@
                 <div>
                     <img src="#" />
                     <div>
-                        <span>EXTRAT</span>
+                        <span>EXTRAT</span> <!-- Всі span  в одном рядку, того їх в div -->
                         <span>DATA</span>
                         <Span>Coments</Span>
-                        <p><h3><a href="#">The Next 6 Things Secrets Will Make Your Latest Look</a></h3></p>
+                        <p> <!-- Якщо текст ссилка тоді першим тегом іде <a>, внутрішній тест не над обгортати в <p> -->
+                            <h3> <!-- Якщо текст ссилка тоді першим тегом іде <a>, внутрішній тест не над обгортати в <p> -->
+                                <a href="#">
+                                    The Next 6 Things Secrets Will Make Your Latest Look
+                                </a>
+                            </h3>
+                        </p>
                     </div>
                 </div>
                 <div>
@@ -301,18 +329,18 @@
         </div>
         
         <div title="partners">
-            <span>
+            <span> <!-- span не може слугувати як контейнер для об'єктів, для цього є div -->
                 <img src="#" alt=""/>
                 <img src="#" alt=""/>
                 <img src="#" alt=""/>
                 <img src="#" alt=""/>
-            </span>
+            </span> <!-- span використовується для ремарок в тексті -->
         </div>
 
         <div id="div__contact" title="our contact">
             <h2>OUR CONTACT</h2>
             <div>
-                <div>
+                <div> <!-- Блоки об'єднані логікою треба об'єднуват в блок div (картинка з текстом, що іде з нею) -->
                     <img src="#" alt=""/>
                     <img src="#" alt=""/>
                     <img src="#" alt=""/>
@@ -329,7 +357,7 @@
                     </div>
                 </div>
             </div>
-            <form action="#">
+            <form action="#" method="post">
                 <input type="text"/>
                 <input type="tel"/>
                 <input type="email"/>
@@ -341,7 +369,7 @@
             
         <footer>
             <p>Copiright 2022 Thernex, All rights Reserved.</p>
-            <div>
+            <div> <!-- список можна не обертать в div -->
                 <ul>
                     <li><input type="image" src="img/facebook-letter-logo.png" alt="facebook-letter-logo"/></li>
                     <li><input type="image" src="img/twitter-black-shape.png" alt="twitter-black-shape"/></li>
@@ -351,6 +379,6 @@
                 </ul>
             </div>
         </footer>
-        <div><input type="image" src="img/angle-up.png" alt="angle-up"/></div>
+        <div><input type="image" src="img/angle-up.png" alt="angle-up"/></div><!--картинки просто тегом img-->
     </body>
 </html>
